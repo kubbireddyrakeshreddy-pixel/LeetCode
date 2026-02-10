@@ -2,7 +2,9 @@ class Solution {
     public boolean halvesAreAlike(String s) {
         String str=s.toLowerCase();
         int len=str.length();
-		int i=0,mid=(len/2)-1,j=len-1;
+		int i=0;
+		int mid=(len/2)-1;
+		int j=len-1;
 		int count=vowel_count(i,mid,str);
 		int count1=vowel_count(mid+1,j,str);
 		if(count==count1) {
