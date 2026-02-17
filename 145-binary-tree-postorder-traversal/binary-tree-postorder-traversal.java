@@ -20,14 +20,14 @@ class Solution {
         return result;
         
     }
-      public List<Integer> postorder(TreeNode root,List<Integer> result) {
+      public void  postorder(TreeNode root,List<Integer> result) {
                    if(root==null){
-                    return result;
+                    return ;
                    }
                    postorder(root.left,result);
                    postorder(root.right,result);
                    result.add(root.val);
-                     return result;
+                     
       }
 
 }
