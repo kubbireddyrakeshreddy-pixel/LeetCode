@@ -14,16 +14,17 @@
  * }
  */
 class Solution {
+      List<String> res=new ArrayList<>();
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> res=new ArrayList<>();
+      
         if(root!=null){
-        help(res,root,"");
+        help(root,"");
         }
         return res;
         
 
         }
-        public void help(List<String> res,TreeNode root,String path){
+        public void help(TreeNode root,String path){
                      if(path.isEmpty()){
                         path+=root.val;
                      }
@@ -35,10 +36,10 @@ class Solution {
                     return;
                    }
                    if(root.left!=null){
-                     help(res,root.left,path);
+                     help(root.left,path);
                    }
                    if(root.right!=null){
-                        help(res,root.right,path);
+                        help(root.right,path);
                    }
         }
     }
