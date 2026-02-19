@@ -16,19 +16,19 @@
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result=new ArrayList<>();
-         inorder(root,result);
-         return result;
-        
-    }
-    public  static void inorder(TreeNode root,List<Integer> result)
-    {
-              if(root==null){
-                return ;
-              }
-              inorder(root.left,result);
-              result.add(root.val);
-              inorder(root.right,result);
+        Stack<TreeNode> s=new Stack<>();
+        while(!s.isEmpty() || root!=null){
 
-
+            while(root!=null){
+                s.push(root);
+                root=root.left;
+            }
+             root=s.pop();
+            result.add(root.val);
+            root=root.right;
+           
+        }
+           
+            return result;
     }
 }
