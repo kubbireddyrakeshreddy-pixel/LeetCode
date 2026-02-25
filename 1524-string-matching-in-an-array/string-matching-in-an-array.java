@@ -4,9 +4,9 @@ class Solution {
          int n=words.length;
 	  for(int i=0;i<n;i++) {
 		  for(int j=0;j<n;j++) {
-		    if(i!=j && words[j].contains(words[i])) {
+		    if(i!=j && words[j].contains(words[i]) && !li.contains(words[i])) {
 			  li.add(words[i]);
-              break;
+              
               
 		  }
 		   
