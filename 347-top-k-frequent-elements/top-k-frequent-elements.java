@@ -8,8 +8,8 @@ class Solution {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
         
-        for(int key : map.keySet()){
-            min.offer(key);
+        for(int e: map.keySet()){
+            min.offer(e);
             if(min.size() > k){
                 min.poll();
             }
